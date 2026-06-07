@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>
+CodeAlpha Network Sniffer
+</title>
+
+<link
+rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}"
+>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>
+🛡 Network Sniffer Dashboard
+</h1>
+
+<div class="buttons">
+
+<button onclick="startCapture()">
+Start Capture
+</button>
+
+<a href="/download">
+<button>
+Export CSV
+</button>
+</a>
+
+</div>
+
+<input
+type="text"
+id="search"
+placeholder="Search IP or Protocol"
+>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Time</th>
+<th>Source IP</th>
+<th>Destination IP</th>
+<th>Protocol</th>
+<th>Src Port</th>
+<th>Dst Port</th>
+<th>Length</th>
+
+</tr>
+
+</thead>
+
+<tbody id="packetTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
